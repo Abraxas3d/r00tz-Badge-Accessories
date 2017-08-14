@@ -42,5 +42,5 @@ translate([0,0,-USBheight - wall]) difference(){
     translate([BadgeWidth + 2*wall + WireCut, wall, BatteryHeight]) rotate([90,0,0]) cylinder(r=WireCut/2,h=wall); //round bottom of wire hole   
 }
 
-translate([-JoystickWidth, 0.3*mmperinch, BadgeHeight]) cube([JoystickWidth, JoystickLength, JoystickHeight]); //landing pad for joystick
+translate([-JoystickWidth, 0.45*mmperinch, BadgeHeight]) cube([JoystickWidth, JoystickLength, JoystickHeight]); //landing pad for joystick
 translate([BadgeWidth - (0.5)*USBwidth,0,-USBheight - wall]) cube([JoystickWidth, JoystickLength, JoystickHeight]); //connect USB and Battery for sturdiness
