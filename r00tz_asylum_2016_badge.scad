@@ -39,7 +39,8 @@ translate([0,0,-USBheight - wall]) difference(){
     translate([BadgeWidth + wall, 0, 0]) cube([BatteryWidth + 2*wall, BatteryLength + 2*wall, BatteryHeight + wall]); //Block for battery
     translate([BadgeWidth + 2*wall, wall, wall]) cube([BatteryWidth, BatteryLength, BatteryHeight]); //hollow out block for battery
     translate([BadgeWidth + 2*wall + WireCut/2, 0, BatteryHeight]) cube([WireCut, WireCut, WireCut]); //square cut for wire hole
-    translate([BadgeWidth + 2*wall + WireCut, wall, BatteryHeight]) rotate([90,0,0]) cylinder(r=WireCut/2,h=wall); //round bottom of wire hole   
+    translate([BadgeWidth + 2*wall + WireCut, wall, BatteryHeight]) rotate([90,0,0]) cylinder(r=WireCut/2,h=wall); //round bottom of wire hole
+    translate([BadgeWidth + (0.5)*BatteryWidth + 2*wall, (0.5)*BatteryLength, -BatteryHeight+wall]) cylinder(r=0.35*mmperinch, h=BatteryHeight+wall);
 }
 
 translate([-JoystickWidth, 0.45*mmperinch, BadgeHeight]) cube([JoystickWidth, JoystickLength, JoystickHeight]); //landing pad for joystick
